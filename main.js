@@ -143,7 +143,7 @@ function Platform() {
   else if (score >= 2000 && score < 5000) this.types = [2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4];
   else if (score >= 1000 && score < 2000) this.types = [2, 2, 2, 3, 3, 3, 3, 3];
   else if (score >= 500 && score < 1000) this.types = [1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3];
-  else if (score >= 100 && score < 500) this.types = [1, 1, 1, 1, 2, 2];
+  else if (score >= 100 && score < 500) this.types = [1, 1, 1, 1, 1, 1];
   else this.types = [1];
 
   this.type = this.types[Math.floor(Math.random() * this.types.length)];
@@ -246,10 +246,10 @@ function init() {
     document.onkeydown = function(e) {
       var key = e.keyCode;
       
-      if (key == 37) {
+      if (key == 65) {
         dir = "left";
         player.isMovingLeft = true;
-      } else if (key == 39) {
+      } else if (key == 68) {
         dir = "right";
         player.isMovingRight = true;
       }
@@ -265,10 +265,10 @@ function init() {
     document.onkeyup = function(e) {
       var key = e.keyCode;
     
-      if (key == 37) {
+      if (key == 65) {
         dir = "left";
         player.isMovingLeft = false;
-      } else if (key == 39) {
+      } else if (key == 68) {
         dir = "right";
         player.isMovingRight = false;
       }
